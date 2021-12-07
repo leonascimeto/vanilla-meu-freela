@@ -2,6 +2,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 16px;
 
   padding: 0 27px;
 
@@ -21,8 +22,7 @@
   .sideRight{
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+    gap: 32px;
   }
 
   .toogleArea{
@@ -99,7 +99,8 @@
 
   #socialMedia{
     display: flex;
-    gap: 0 20px;
+    gap: 16px;
+
 
     img{
       width: 32px;
@@ -118,6 +119,7 @@
     padding: 8px 16px;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 
     .sideRight{
       flex-direction: column-reverse;
