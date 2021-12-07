@@ -1,11 +1,41 @@
-$colorText: #333;
+$colorBlackPrimary:#000;
+$colorBlackSecond:#151515;
+$colorBlackTerciary: #333;
+
 $colorWhite: #fff;
 
 $colorWarning: #EE5253;
 $colorSuccess: #10AC84;
 
+$colorDarkWarning: darken(#EE5253, 25%);
+$colorDarkSuccess: darken(#10AC84, 25%);
+
 $colorBgHeader: linear-gradient(180deg, #EE5253 0%, #D92223 100%);
-$colorBgPrimary: #fff;
 $colorBgSecond: #EAEAEA;
 
-$colorBgTransparentDark: rgba(0,0,0,.8);
+$colorBgTransparent: rgba(0,0,0,.8);
+$colorBgTransparentDark: rgba(0,0,0,.9);
+
+//default theme
+:root{
+  --bgMain: #{$colorWhite};
+  --BgHeader: #{$colorBgHeader};
+  --text: #{$colorBlackTerciary};
+  --bgImage: #{$colorBgTransparent};
+  --bgFooter: #{$colorBgSecond};
+  --bgDivider: #{$colorBgSecond};
+  --bgWarningButton: #{$colorWarning};
+  --bgSuccesButton: #{$colorSuccess};
+}
+
+//dark theme
+.dark{
+  --bgMain: #{$colorBlackSecond};
+  --text: #{$colorWhite};
+  --bgImage: #{$colorBgTransparentDark};
+  --BgHeader: #{$colorBlackPrimary};
+  --bgFooter: #{$colorBlackPrimary};
+  --bgDivider: #{$colorBlackPrimary};
+  --bgWarningButton: #{$colorDarkWarning};
+  --bgSuccesButton: #{$colorDarkSuccess};
+}

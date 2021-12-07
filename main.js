@@ -1,11 +1,13 @@
 import Toastify from 'toastify-js';
 
 //elements
+const html = document.querySelector('html');
 const callFirtsButton = document.querySelector('.goToForm');
 const nameInput = document.querySelector('#nameInput');
 const whatsappInput = document.querySelector('#whatsappInput');
 const buttonSubmit = document.querySelector('#buttonSubmit');
 const target = document.querySelectorAll('[data-anime]');
+const buttonToggle = document.querySelector('input[type="checkbox"]');
 
 //debounce to event scroll animate
 function debounce(func, wait, immediate) {
@@ -31,6 +33,7 @@ function debounce(func, wait, immediate) {
 };
 
 //events
+buttonToggle.addEventListener('change', handleButtonToggle)
 callFirtsButton.addEventListener('click', goToFormOnClick);
 buttonSubmit.addEventListener('click', handleButtonSubmit);
 whatsappInput.addEventListener('input', phoneFormatter);
@@ -90,6 +93,10 @@ const validationForm = {
     else
       return { message: 'Sem erros', isValid: true }
   }
+}
+
+function handleButtonToggle() {
+  html.classList.toggle('dark');
 }
 
 function goToFormOnClick() {

@@ -4,7 +4,7 @@
   width: 100%;
   height: calc(100vh - 80px);
 
-  background-image: url('../assets/img-main.svg');
+  background-image: url('../assets/main.webp');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -18,7 +18,7 @@
     height: 100%;
     width: 100%;
 
-    background-color: $colorBgTransparentDark;
+    background-color: var(--bgImage);
   }
 
   #content{
@@ -43,7 +43,7 @@
     > button{
       @include buttonStyle;
 
-      background: $colorWarning;
+      background-color: var(--bgWarningButton);
       
       margin-top: 40px;
 
