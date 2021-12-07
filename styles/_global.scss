@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+body{
+  min-width: 300px;
+
+  font-family: 'Roboto', sans-serif;
+
+  color: $colorText;
+
+  overflow-x: hidden;
+}
+
+[data-anime]{
+  transition: .8s;
+  opacity: 0;
+}
+
+[data-anime="left"]{
+  transform: translate3d(-100px, 0px, 0px);
+}
+
+[data-anime="right"]{
+  transform: translate3d(100px, 0px, 0px);
+}
+
+.animate {
+  opacity: 1;
+  transform: translate3d(0px, 0px, 0px);
+}
+
+button{
+  transition: all .3s;
+}
+
+button:hover{
+  transform: scale(1.1);
+}
+
+@keyframes showByLeft{
+  0%{
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  50%{
+    opacity: .5;
+  }
+  100%{
+    transform: translateX(initial);
+    opacity: 1;
+  }
+}
+
+@keyframes showByRight{
+  0%{
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  50%{
+    opacity: .5;
+  }
+  100%{
+    transform: translateX(initial);
+    opacity: 1;
+  }
+}
+
+@keyframes showByTop{
+  0%{
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  50%{
+    opacity: .5;
+  }
+  100%{
+    transform: translateX(initial);
+    opacity: 1;
+  }
+}
+
+@keyframes showByBottom{
+  0%{
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  50%{
+    opacity: .5;
+  }
+  100%{
+    transform: translateX(initial);
+    opacity: 1;
+  }
+}

@@ -1,0 +1,45 @@
+#mainHeader{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 0 27px;
+
+  height: 80px;
+  background: $colorBgHeader;
+
+  color: $colorWhite;
+
+  #title{
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 1.2;
+
+    animation: showByLeft ease-in 1s;
+  }
+
+  #socialMedia{
+    display: flex;
+    gap: 0 20px;
+
+    img{
+      width: 32px;
+      height: 32px;
+      transition: all .2s;
+    }
+
+    a:hover img{
+      transform: scale(1.2);
+    }
+    animation: showByRight ease-in 1s;
+  }
+
+  @media(max-width: $screensmall){
+    #socialMedia{
+      > img{
+        width: 5px;
+        height: 5px;
+      }
+    }
+  }
+}

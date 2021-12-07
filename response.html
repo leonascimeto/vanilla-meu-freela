@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./styles/response.scss">
+  <title>Meu Freela - Envio</title>
+</head>
+
+<body>
+  <div id="container">
+    <div id="text">
+      <h2>Olá </h2>
+      <h1>Seus dados foram registrados, em breve entraremos em contato.</h1>
+      <a href="/">Pagina inicial</a>
+    </div>
+    <div id="image">
+      <img src="./assets/response.png" alt="Parabéns">
+    </div>
+  </div>
+  <script>
+    const elementTitle = document.querySelector('#text h2');
+
+    const data = fetch('./data/index.json')
+      .then(response => response.json())
+      .then(json => elementTitle.innerHTML += ' ' + json.name + '!');
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,12 @@
+@mixin buttonStyle {
+  width: 305px;
+  height: 60px;
+
+  color: $colorWhite;
+
+  border: none;
+  border-radius: 8px;
+  
+  font-size: 22px;
+  line-height: 1;
+}

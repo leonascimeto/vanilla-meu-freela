@@ -1,0 +1,73 @@
+@import './colors';
+
+#mainApresentation{
+  width: 100%;
+  height: calc(100vh - 80px);
+
+  background-image: url('../assets/img-main.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  #contentBg{
+    display: flex;
+    align-items: center;
+
+    padding: 80px;
+
+    height: 100%;
+    width: 100%;
+
+    background-color: $colorBgTransparentDark;
+  }
+
+  #content{
+    max-width: 750px;
+
+    color: $colorWhite;
+
+    > h1{
+      font-size: 80px;
+      line-height: 1.2;
+      font-weight: 700;
+      animation: showByLeft ease-in 1s;
+    }
+
+    > h2{
+      font-size: 30px;
+      line-height: 1.2;
+      font-weight: 400;
+      animation: showByTop ease-in 1s;
+    }
+
+    > button{
+      @include buttonStyle;
+
+      background: $colorWarning;
+      
+      margin-top: 40px;
+
+      animation: showByBottom ease-in 1s;
+    }
+  }
+
+  @media(max-width: $screenMedium){
+    height: calc(75vh - 80px);
+
+    #contentBg{
+      padding: 32px;
+    }
+
+    #content > h1{
+      font-size: 32px;
+    }
+
+    #content > h2{
+      font-size: 24px;
+    }
+
+    #content > button{
+      width: 220px;
+    }
+  }
+}

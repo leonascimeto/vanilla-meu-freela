@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg" />
+  <link rel="stylesheet" href="./styles/main.scss">
+
+  <meta name="description" content="Página de contato para serviços voltados para desenvolvimento de sites e aplicativos.">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Meu Freela</title>
+</head>
+
+<body>
+  <header id="mainHeader">
+    <h1 id="title">Meu Freela</h1>
+
+    <nav>
+      <ul id="socialMedia">
+        <li><a href="https://www.linkedin.com/in/leonascimentopro/" target="_blank"><img src="./assets/linkedin.svg" alt="Linkedin"></a></li>
+        <li><a href="https://www.instagram.com/" target="_blank"><img src="./assets/intagram.svg" alt="Instagram"></a></li>
+        <li><a href="https://twitter.com/" target="_blank"><img src="./assets/twitter.svg" alt="Twitter"></a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="mainApresentation">
+    <div id="contentBg">
+      <div id="content">
+        <h2>Desenvolvedores prontos para ação</h2>
+        <h1>Seu projeto pronto na velocidade da luz</h1>
+        <button class="btn goToForm">Peça uma reunião</button>
+      </div>
+    </div>
+  </main>
+
+  <div id="mainAboutUs">
+    <div class="content">
+      <main data-anime="left">
+        <h2>Nossa iniciativa</h2>
+        <p>
+          Somos desenvolvedores que se dedicam a fazer projetos perfeitos e entregar valor para todos os seus clientes. Gostamos de ver clientes satisfeitos com projetos feitos com carinho, atenção e qualidade altíssima.
+        </p>
+      </main>
+      <div id="aboutImage" data-anime="right">
+        <img src="./assets/person.svg" alt="Sobre nós" loading="lazy">
+      </div>
+    </div>
+    <div id="divider">
+
+    </div>
+  </div>
+
+  <div id="mainCallToAction">
+    <div class="content" data-anime="left">
+      <header>
+        <h2>Mande um oi, ligamos para você!</h2>
+        <p>Preencha seus dados para que a gente possa entrar em contato.</p>
+      </header>
+      <form method="post" action="ok.js">
+        <label for="name">
+          <span>Nome Completo</span>
+          <input type="text" name="name" id="nameInput" placeholder="Ex: Mateus Ávila Isidoro">
+        </label>
+
+        <label for="whatsapp">
+          <span>Whatsapp</span>
+          <input type="text" name="whatsapp" id="whatsappInput" placeholder="(99)99999-9999">
+        </label>
+
+        <button type="submit" id="buttonSubmit">Peça uma reunião</button>
+      </form>
+    </div>
+  </div>
+
+  <footer id="mainFooter">
+    <span>Desafio 1 - front-end iniciante</span>
+    <span>Iniciativa <strong>Dev Hall</strong></span>
+  </footer>
+
+  <script type="module" src="/main.js"></script>
+</body>
+
+</html>

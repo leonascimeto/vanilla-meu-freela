@@ -1,0 +1,114 @@
+#mainCallToAction{
+  display: flex;
+  justify-content: center;
+  
+  width: 100%;
+  min-height: 300px;
+  
+  padding: 16px;
+
+  .content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    transition: all .8s;
+    
+    width: 75%;
+  
+    > header{
+      > h2{
+        font-weight: bold;
+        font-size: 50px;
+        line-height: 1.2; 
+        margin-bottom: 20px;   
+      }
+  
+      > p{
+        font-size: 22px;
+        line-height: 1.2;    
+        margin-bottom: 40px;
+      }
+    }
+  
+    > form{
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 22px;
+
+      > label{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        
+        > span{
+          color: #666;
+          
+          font-size: 14px;
+          line-height: 1.2;
+        }
+
+        > input{
+          width: 340px;
+          height: 60px;
+
+          color: $colorText;
+          
+          font-size: 18px;
+          
+          padding: 16px;
+
+          outline: none;
+          border-radius: 8px;
+        }
+      }
+
+      > button{
+        align-self: flex-end;
+
+        @include buttonStyle;
+
+        background: $colorSuccess;
+        }
+  
+    }
+  }
+
+  @media(max-width: $screenExtraLarge){
+    .content{
+      align-items: center;
+
+      width: 100%;
+      padding: 32px;
+    }
+    .content > form{
+      justify-content: center;
+    }
+  }
+
+  @media(max-width: 780px){
+    .content > form > label {
+      width: 100%;
+
+      > input{
+        width: 100%;
+      }
+    }
+  }
+
+  @media(max-width: 540px){
+    .content{
+      > header{
+          > h2{
+            font-size: 32px;
+            margin-bottom: 8px;
+          }
+      
+          > p{
+            font-size: 16px;
+          }
+      }
+    }
+  }
+}
