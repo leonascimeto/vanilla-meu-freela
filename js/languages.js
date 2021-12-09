@@ -1,4 +1,7 @@
 //elements
+import imgBrazil from '../assets/brazil.webp';
+import imgEua from '../assets/eua.webp';
+
 const buttonChangeLanguage = document.querySelector('[language]');
 const imageButtonLanguageSelect = document.querySelector('#imageButtonLanguageSelect');
 const apresentationTitle = document.querySelector('[data-text="apresentationTitle"]');
@@ -48,12 +51,14 @@ const languagesData = {
 
 const configButton = {
   portuguese: {
-    src: './assets/brazil.webp',
-    attr: 'portuguese'
+    src: imgBrazil,
+    attr: 'portuguese',
+    alt: 'português'
   },
   english: {
-    src: './assets/eua.webp',
-    attr: 'english'
+    src: imgEua,
+    attr: 'english',
+    alt: 'english'
   },
 }
 
@@ -62,10 +67,10 @@ const changeLanguage = {
     window.localStorage.setItem('@meufreela/language', language);
   },
   changeImageButton(language) {
-    const { src, attr } = configButton[language];
-    console.log('teste: ', src)
+    const { src, attr, alt } = configButton[language];
 
     imageButtonLanguageSelect.setAttribute('src', src);
+    imageButtonLanguageSelect.setAttribute('alt', alt);
     buttonChangeLanguage.setAttribute('language', attr);
   },
   changeContentText(language) {

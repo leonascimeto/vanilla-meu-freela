@@ -6,7 +6,7 @@ Meu Freela
   <a href="https://www.linkedin.com/in/leonascimentopro/">
       <img alt="Made by Leonardo" src="https://img.shields.io/badge/Made%20By-Leonardo%20Fernandes-blue">
   </a>
-  <a target="_blank" href="https://leonardo-vanilla-my-freela.netlify.app/">
+  <a target="_blank" href="https://vanilla-my-freela.netlify.app/">
     <img alt="Netlify" src="https://api.netlify.com/api/v1/badges/534d0639-5a3a-43ae-b699-f3e7fc31113e/deploy-status">
   </a>
 </p>
@@ -14,7 +14,7 @@ Meu Freela
 
 <div align="center">
 
-<a target="_blank" href="https://leonardo-vanilla-my-freela.netlify.app/"><img alt="netlify" src=".github/netlify.svg" ></img></a>
+<a target="_blank" href="https://vanilla-my-freela.netlify.app/"><img alt="netlify" src=".github/netlify.svg" ></img></a>
 
 </div>
 
