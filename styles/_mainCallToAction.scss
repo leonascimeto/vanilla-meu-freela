@@ -87,9 +87,11 @@
   }
 
   @media(max-width: $screenMedium){
-    .content > form > label {
+    .content{
       width: 100%;
+    }
 
+    .content > form > label {
       > input{
         width: 100%;
       }

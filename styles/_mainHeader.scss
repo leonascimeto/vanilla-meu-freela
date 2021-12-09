@@ -4,6 +4,8 @@
   align-items: center;
   gap: 16px;
 
+  width: 100%;
+
   padding: 0 27px;
 
   height: 80px;
@@ -149,12 +151,7 @@
 
     .sideRight{
       flex-direction: column-reverse;
-    }
-    #socialMedia{
-      > img{
-        width: 5px;
-        height: 5px;
-      }
+      width: 100%;
     }
   }
 }
