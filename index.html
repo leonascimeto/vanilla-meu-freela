@@ -16,6 +16,14 @@
   <header id="mainHeader">
     <h1 id="title">Meu Freela</h1>
     <div class="sideRight">
+
+      <div id="languageSelect">
+        <button language="portuguese">
+          <img id="imageButtonLanguageSelect" src="./assets/brazil.webp" alt="português">
+        </button>
+      </div>
+
+
       <div class="toogleArea">
         <img src="./assets/sun.png" alt="Modo Padrão">
 
@@ -26,20 +34,20 @@
 
         <img src="./assets/moon.png" alt="Modo Padrão">
       </div>
-      <div id="socialMedia">
+      <nav id="socialMedia">
         <a href="https://www.linkedin.com/in/leonascimentopro/" target="_blank"><img src="./assets/linkedin.svg" alt="Linkedin"></a>
         <a href="https://www.instagram.com/" target="_blank"><img src="./assets/intagram.svg" alt="Instagram"></a>
         <a href="https://twitter.com/" target="_blank"><img src="./assets/twitter.svg" alt="Twitter"></a>
-      </div>
+      </nav>
     </div>
   </header>
 
   <main id="mainApresentation">
     <div id="contentBg">
       <div id="content">
-        <h2>Desenvolvedores prontos para ação</h2>
-        <h1>Seu projeto pronto na velocidade da luz</h1>
-        <button class="btn goToForm">Peça uma reunião</button>
+        <h2 data-text="apresentationSubtitle">Desenvolvedores prontos para ação</h2>
+        <h1 data-text="apresentationTitle">Seu projeto pronto na velocidade da luz</h1>
+        <button class="btn goToForm" data-text="apresentationButton">Peça uma reunião</button>
       </div>
     </div>
   </main>
@@ -47,8 +55,8 @@
   <div id="mainAboutUs">
     <div class="content">
       <main data-anime="left">
-        <h2>Nossa iniciativa</h2>
-        <p>
+        <h2 data-text="aboutUsTitle">Nossa iniciativa</h2>
+        <p data-text="aboutUsText">
           Somos desenvolvedores que se dedicam a fazer projetos perfeitos e entregar valor para todos os seus clientes. Gostamos de ver clientes satisfeitos com projetos feitos com carinho, atenção e qualidade altíssima.
         </p>
       </main>
@@ -64,12 +72,12 @@
   <div id="mainCallToAction">
     <div class="content" data-anime="left">
       <header>
-        <h2>Mande um oi, ligamos para você!</h2>
-        <p>Preencha seus dados para que a gente possa entrar em contato.</p>
+        <h2 data-text="callTitle">Mande um oi, ligamos para você!</h2>
+        <p data-text="callSubtitle">Preencha seus dados para que a gente possa entrar em contato.</p>
       </header>
       <form method="post" action="ok.js">
         <label for="name">
-          <span>Nome Completo</span>
+          <span data-text="labelName">Nome Completo</span>
           <input type="text" name="name" id="nameInput" placeholder="Ex: Mateus Ávila Isidoro">
         </label>
 
@@ -78,16 +86,20 @@
           <input type="text" name="whatsapp" id="whatsappInput" placeholder="(99)99999-9999">
         </label>
 
-        <button type="submit" id="buttonSubmit">Peça uma reunião</button>
+        <button type="submit" id="buttonSubmit" data-text="callButton">Peça uma reunião</button>
       </form>
     </div>
   </div>
 
   <footer id="mainFooter">
-    <span>Desafio 1 - front-end iniciante</span>
-    <span>Iniciativa <strong>Dev Hall</strong></span>
+    <spanc data-text="footerTextTop">Desafio 1 - front-end iniciante</spanc>
+    <div>
+      <span data-text="footerTextBottom">Iniciativa </span>
+      <strong>Dev Hall</strong>
+    </div>
   </footer>
 
+  <script type="module" src="./js/languages.js"></script>
   <script type="module" src="/main.js"></script>
 </body>
 

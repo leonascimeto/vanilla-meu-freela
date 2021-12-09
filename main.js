@@ -33,7 +33,7 @@ function debounce(func, wait, immediate) {
 };
 
 //events
-buttonToggle.addEventListener('change', handleButtonToggle)
+buttonToggle.addEventListener('change', handleButtonToggle);
 callFirtsButton.addEventListener('click', goToFormOnClick);
 buttonSubmit.addEventListener('click', handleButtonSubmit);
 whatsappInput.addEventListener('input', phoneFormatter);
@@ -145,5 +145,11 @@ function handleButtonSubmit(event) {
     executeNotifications('Seus dados foram salvos!, em breve entraremos em contato', '#10AC84', 4000);
   }
 }
+
+
+function changeLanguage({ target }) {
+
+}
+
 
 scrollActions.animeScroll();
