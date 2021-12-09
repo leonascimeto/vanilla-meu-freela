@@ -136,8 +136,12 @@
   }
 
   @media(max-width: $screenSmall){
+    position: fixed;
+
     flex-direction: column;
+    
     padding: 16px;
+    
     overflow: hidden;
     #title{
       > h1{
