@@ -10,8 +10,7 @@ Meu Freela
     <img alt="Netlify" src="https://api.netlify.com/api/v1/badges/534d0639-5a3a-43ae-b699-f3e7fc31113e/deploy-status">
   </a>
 </p>
-
-<img src=".github/myfreela.gif">
+<img src=".github/meuFreela.gif">
 
 <div align="center">
 
@@ -43,6 +42,7 @@ As seguintes ferramentas foram usadas na construção do projeto:
 - [x] Notificação de Validação do Formulário
 - [x] Design Responsivo
 - [x] Temas Default e Dark Mode
+- [x] Versão em ingês
 
 
 ## 🚀 Como rodar este projeto

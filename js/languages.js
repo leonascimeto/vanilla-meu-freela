@@ -1,29 +1,22 @@
 //elements
-const buttonLangSelect = document.querySelector('[language]');
+const buttonChangeLanguage = document.querySelector('[language]');
 const imageButtonLanguageSelect = document.querySelector('#imageButtonLanguageSelect');
-
-const allTexts = document.querySelectorAll('[data-text]');
-
 const apresentationTitle = document.querySelector('[data-text="apresentationTitle"]');
 const apresentationSubtitle = document.querySelector('[data-text="apresentationSubtitle"]');
 const apresentationButton = document.querySelector('[data-text="apresentationButton"]');
-
 const aboutUsTitle = document.querySelector('[data-text="aboutUsTitle"]');
 const aboutUsText = document.querySelector('[data-text="aboutUsText"]');
-
 const callTitle = document.querySelector('[data-text="callTitle"]');
 const callSubtitle = document.querySelector('[data-text="callSubtitle"]');
 const callButton = document.querySelector('[data-text="callButton"]')
-
 const labelName = document.querySelector('[data-text="labelName"]');
-
 const footerTextTop = document.querySelector('[data-text="footerTextTop"]');
 const footerTextBottom = document.querySelector('[data-text="footerTextBottom"]');
 
-//eventos
-buttonLangSelect.addEventListener('click', changeLanguage);
+//events
+buttonChangeLanguage.addEventListener('click', handleClickButtonChangeLanguage);
 
-//conteudos
+//contents
 const languagesData = {
   "english": {
     "apresentationTitle": "Your project ready at the speed of light",
@@ -53,33 +46,59 @@ const languagesData = {
   }
 }
 
-function changeLanguage() {
-  let language = buttonLangSelect.getAttribute('language');
-
-  //change Button
-  if (language === 'portuguese') {
-    imageButtonLanguageSelect.setAttribute('src', './assets/eua.webp');
-    buttonLangSelect.setAttribute('language', 'english');
-
-    language = buttonLangSelect.getAttribute('language');
-  } else {
-    imageButtonLanguageSelect.setAttribute('src', './assets/brazil.webp');
-    buttonLangSelect.setAttribute('language', 'portuguese');
-
-    language = buttonLangSelect.getAttribute('language');
-  }
-
-  //change language
-  apresentationTitle.innerHTML = languagesData[language].apresentationTitle;
-  apresentationSubtitle.innerHTML = languagesData[language].apresentationSubtitle;
-  apresentationButton.innerHTML = languagesData[language].apresentationButton;
-  aboutUsTitle.innerHTML = languagesData[language].aboutUsTitle;
-  aboutUsText.innerHTML = languagesData[language].aboutUsText;
-  callTitle.innerHTML = languagesData[language].callTitle;
-  callSubtitle.innerHTML = languagesData[language].callSubtitle;
-  callButton.innerHTML = languagesData[language].callButton;
-  labelName.innerHTML = languagesData[language].labelName;
-  footerTextTop.innerHTML = languagesData[language].footerTextTop;
-  footerTextBottom.innerHTML = languagesData[language].footerTextBottom;
-
+const configButton = {
+  portuguese: {
+    src: './assets/brazil.webp',
+    attr: 'portuguese'
+  },
+  english: {
+    src: './assets/eua.webp',
+    attr: 'english'
+  },
 }
+
+const changeLanguage = {
+  registerLocalStorage(language) {
+    window.localStorage.setItem('@meufreela/language', language);
+  },
+  changeImageButton(language) {
+    const { src, attr } = configButton[language];
+    console.log('teste: ', src)
+
+    imageButtonLanguageSelect.setAttribute('src', src);
+    buttonChangeLanguage.setAttribute('language', attr);
+  },
+  changeContentText(language) {
+    apresentationTitle.innerHTML = languagesData[language].apresentationTitle;
+    apresentationSubtitle.innerHTML = languagesData[language].apresentationSubtitle;
+    apresentationButton.innerHTML = languagesData[language].apresentationButton;
+    aboutUsTitle.innerHTML = languagesData[language].aboutUsTitle;
+    aboutUsText.innerHTML = languagesData[language].aboutUsText;
+    callTitle.innerHTML = languagesData[language].callTitle;
+    callSubtitle.innerHTML = languagesData[language].callSubtitle;
+    callButton.innerHTML = languagesData[language].callButton;
+    labelName.innerHTML = languagesData[language].labelName;
+    footerTextTop.innerHTML = languagesData[language].footerTextTop;
+    footerTextBottom.innerHTML = languagesData[language].footerTextBottom;
+  },
+  execute(langCurrent) {
+    this.changeImageButton(langCurrent);
+    this.registerLocalStorage(langCurrent);
+    this.changeContentText(langCurrent);
+  }
+}
+
+function handleClickButtonChangeLanguage() {
+  const langPrev = buttonChangeLanguage.getAttribute('language');
+  const langCurrent = langPrev === 'portuguese' ? 'english' : 'portuguese';
+
+  changeLanguage.execute(langCurrent);
+}
+
+// pegar dados do localstorage
+function initLanguageLocal() {
+  const localData = window.localStorage.getItem('@meufreela/language');
+  localData && changeLanguage.execute(localData);
+}
+
+initLanguageLocal();
