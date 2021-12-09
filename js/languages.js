@@ -48,11 +48,11 @@ const languagesData = {
 
 const configButton = {
   portuguese: {
-    src: './assets/brasil.png',
+    src: './assets/brazil.webp',
     attr: 'portuguese'
   },
   english: {
-    src: './assets/eua.png',
+    src: './assets/eua.webp',
     attr: 'english'
   },
 }
