@@ -1,7 +1,7 @@
-//elements
 import imgBrazil from '../assets/brazil.webp';
 import imgEua from '../assets/eua.webp';
 
+//elements
 const buttonChangeLanguage = document.querySelector('[language]');
 const imageButtonLanguageSelect = document.querySelector('#imageButtonLanguageSelect');
 const apresentationTitle = document.querySelector('[data-text="apresentationTitle"]');

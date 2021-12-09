@@ -19,6 +19,7 @@
     > main{
       width: 500px;
       transition: all .8s;
+      padding: 8px;
   
       >h2{
         font-size: 50px;
@@ -53,11 +54,11 @@
   }
 
   @media(max-width: $screenExtraLarge){
+
     .content{
       justify-content: center;
       flex-wrap: wrap;
 
-      padding: 32px;
 
       #aboutImage{
         > img{
@@ -67,7 +68,7 @@
     }
   }
 
-  @media(max-width: $screensmall){
+  @media(max-width: $screenSmall){
     .content{
       > main{
         > h2{

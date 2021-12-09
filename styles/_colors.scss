@@ -19,7 +19,7 @@ $colorBgTransparentDark: rgba(0,0,0,.9);
 //default theme
 :root{
   --bgMain: #{$colorWhite};
-  --BgHeader: #{$colorBgHeader};
+  --bgHeader: #{$colorBgHeader};
   --text: #{$colorBlackTerciary};
   --bgImage: #{$colorBgTransparent};
   --bgFooter: #{$colorBgSecond};
@@ -33,7 +33,7 @@ $colorBgTransparentDark: rgba(0,0,0,.9);
   --bgMain: #{$colorBlackSecond};
   --text: #{$colorWhite};
   --bgImage: #{$colorBgTransparentDark};
-  --BgHeader: #{$colorBlackPrimary};
+  --bgHeader: #{$colorBlackPrimary};
   --bgFooter: #{$colorBlackPrimary};
   --bgDivider: #{$colorBlackPrimary};
   --bgWarningButton: #{$colorDarkWarning};

@@ -2,10 +2,12 @@
 
 body{
   min-width: 300px;
+  width: 100vw;
 
   font-family: 'Roboto', sans-serif;
 
   background-color: var(--bgMain);
   color: var(--text);
 
+  overflow-x: hidden;
 }

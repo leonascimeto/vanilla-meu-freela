@@ -16,3 +16,14 @@
     transform: scale(1.1);
   }
 }
+
+@mixin barsMenuBurger{
+  width: 32px;
+  height: 4px;
+
+  background-color: $colorWhite;
+
+  border-radius: 8px;
+
+  transition: all .5s ease-in-out;
+}

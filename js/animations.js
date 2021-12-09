@@ -1,8 +1,5 @@
 //elements
-const html = document.querySelector('html');
-
 const target = document.querySelectorAll('[data-anime]');
-const buttonToggle = document.querySelector('input[type="checkbox"]');
 
 //debounce to event scroll animate
 function debounce(func, wait, immediate) {
@@ -28,7 +25,6 @@ function debounce(func, wait, immediate) {
 };
 
 //events
-buttonToggle.addEventListener('change', handleButtonToggle);
 (target.length > 0) && window.addEventListener('scroll', debounce(() => animeScroll(), 100));
 
 
@@ -42,18 +38,4 @@ function animeScroll() {
   })
 }
 
-function handleButtonToggle() {
-  html.classList.toggle('dark');
-  window.localStorage.setItem('@meufreela/darkmode', html.classList);
-}
-
-function initDarkMode() {
-  const localData = window.localStorage.getItem('@meufreela/darkmode');
-  if (localData) {
-    html.classList.add('dark');
-    buttonToggle.checked = true;
-  }
-}
-
-initDarkMode();
 animeScroll();

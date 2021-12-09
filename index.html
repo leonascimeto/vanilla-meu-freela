@@ -13,32 +13,37 @@
 </head>
 
 <body>
-  <header id="mainHeader">
-    <h1 id="title">Meu Freela</h1>
+  <header class="mainHeader">
+    <div id="title">
+      <h1>Meu Freela</h1>
+    </div>
     <div class="sideRight">
-
-      <div id="languageSelect">
-        <button language="portuguese">
-          <img id="imageButtonLanguageSelect" src="./assets/brazil.webp" alt="português">
-        </button>
-      </div>
-
-      <div class="toogleArea">
-        <img src="./assets/sun.webp" alt="Modo Padrão">
-
-        <label class="switch">
-          <input type="checkbox">
-          <span class="slider round"></span>
-        </label>
-
-        <img src="./assets/moon.webp" alt="Modo Padrão">
-      </div>
 
       <nav id="socialMedia">
         <a href="https://www.linkedin.com/in/leonascimentopro/" target="_blank"><img src="./assets/linkedin.svg" alt="Linkedin"></a>
         <a href="https://www.instagram.com/" target="_blank"><img src="./assets/intagram.svg" alt="Instagram"></a>
         <a href="https://twitter.com/" target="_blank"><img src="./assets/twitter.svg" alt="Twitter"></a>
       </nav>
+
+      <div id="configs">
+        <div id="languageSelect" class="switchButton">
+          <button language="portuguese">
+            <img id="imageButtonLanguageSelect" src="./assets/brazil.webp" alt="português">
+          </button>
+        </div>
+
+        <div id="themeSelect" class="switchButton">
+          <button mode="default">
+            <img src="./assets/sun.webp" alt="Modo Padrão">
+          </button>
+        </div>
+      </div>
+
+    </div>
+    <div class="burgerButton">
+      <div id="bars">
+
+      </div>
     </div>
   </header>
 
@@ -100,6 +105,8 @@
   </footer>
 
   <script type="module" src="./js/animations.js"></script>
+  <script type="module" src="./js/themes.js"></script>
+  <script type="module" src="./js/toggleMenu.js"></script>
   <script type="module" src="./js/form.js"></script>
   <script type="module" src="./js/languages.js"></script>
 </body>

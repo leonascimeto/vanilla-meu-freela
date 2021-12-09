@@ -1,24 +1,27 @@
-#mainHeader{
+.mainHeader{
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 16px;
+  z-index: 100;
 
   width: 100%;
 
   padding: 0 27px;
 
   height: 80px;
-  background: var(--BgHeader);
+  background: var(--bgHeader);
 
   color: $colorWhite;
 
   #title{
-    font-weight: bold;
-    font-size: 30px;
-    line-height: 1.2;
-
     animation: showByLeft ease-in 1s;
+
+    > h{
+      font-weight: bold;
+      font-size: 30px;
+      line-height: 1.2;
+    }
   }
 
   .sideRight{
@@ -28,102 +31,32 @@
     gap: 32px;
     animation: showByRight ease-in 1s;
 
-    #languageSelect{
-      > button{
-        background-color: rgba(255,255,255,.3);
-        border: none;
-        transition: all .2s;
-        
-        padding: 8px;
-        border-radius: 50%;
-  
-        &:hover{
-          background-color: rgba(255,255,255,.7);
-          transform: scale(1.1);
-        }
-        
-        > img{
-          width: 24px;
-          height: 24px;
-        }
-      }
-    }
-  
-    .toogleArea{
+    #configs{
       display: flex;
-      align-items: center;
-      gap: 8px;
-  
-      > img{
-        width: 28px;
-        height: 28px;
-      }
-  
-      .switch{
-        position: relative;
-        display: inline-block;
-        width: 50px;
-        height: 28px;
-        transition: transform .2s;
+      gap: 16px;
 
-        &:hover{
-          transform: scale(1.1)
-        }
-    
-        input {
-          opacity: 0;
-          width: 0;
-          height: 0;
-        }
-    
-        .slider {
-          position: absolute;
-          cursor: pointer;
-          top: 0;
-          left: 0;
-          right: 0;
-          bottom: 0;
-          background-color: $colorBlackPrimary;
-          -webkit-transition: .4s;
-          transition: .4s;
-        }
-    
-        .slider:before {
-          position: absolute;
-          content: "";
-          height: 22px;
-          width: 22px;
-          left: 2px;
-          bottom: 3px;
-          background-color: $colorWhite;
-          -webkit-transition: .4s;
-          transition: .4s;
-        }
-    
-        input:checked + .slider {
-          background-color: $colorWarning;
-        }
-        
-        input:focus + .slider {
-          box-shadow: 0 0 1px $colorWarning;
-        }
-        
-        input:checked + .slider:before {
-          -webkit-transform: translateX(20px);
-          -ms-transform: translateX(20px);
-          transform: translateX(20px);
-        }
-        
-        /* Rounded sliders */
-        .slider.round {
-          border-radius: 34px;
-        }
-        
-        .slider.round:before {
+      .switchButton{
+        > button{
+          background-color: rgba(255,255,255,.1);
+          border: none;
+          transition: all .2s;
+          
+          padding: 8px;
           border-radius: 50%;
+    
+          &:hover{
+            background-color: rgba(255,255,255,.4);
+            transform: scale(1.1);
+          }
+          
+          > img{
+            width: 24px;
+            height: 24px;
+          }
         }
       }
     }
+
   
     #socialMedia{
       display: flex;
@@ -142,16 +75,91 @@
     }
   }
 
-  @media(max-width: $screensmall){
-    height: auto;
-    padding: 8px 16px;
+  .openButton{
+    background: var(--bgDivider);
+  }
+
+  .burgerButton{
+    position: fixed;
+    top: 16px;
+    right: 8px;
+    display: none;
+
+    width: 50px;
+    height: 50px;
+
+    background-color: rgba(255,255,255, .2);
+
+    border-radius: 8px;
+
+    cursor: pointer;
+    transition: all .2s;
+
+    &:hover{
+      background-color: rgba(255,255,255, .6);
+    }
+
+    #bars{
+      @include barsMenuBurger;
+
+      position: relative;
+    }
+
+    #bars:before,
+    #bars:after{
+      content: '';
+      position: absolute;
+
+      @include barsMenuBurger;
+    }
+
+    #bars::before{
+      transform: translateY(-10px);
+    }
+    #bars::after{
+      transform: translateY(10px);
+    }
+  }
+
+  .openButton{
+    #bars{
+      background: transparent;
+    }
+  
+    #bars::before{
+      transform: rotate(45deg);
+    }
+  
+    #bars::after{
+      transform: rotate(-45deg);
+    }
+  }
+
+  @media(max-width: $screenSmall){
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    padding: 16px;
+    overflow: hidden;
+    #title{
+      > h1{
+        line-height: 50px;
+      }
+    }
+
+    .burgerButton{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
 
     .sideRight{
-      flex-direction: column-reverse;
-      width: 100%;
+      flex-direction: column;
     }
+  }
+}
+
+.openMenu{
+  @media (max-width: $screenSmall) {
+    overflow: auto;
+    height: auto;
   }
 }
