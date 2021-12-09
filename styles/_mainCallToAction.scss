@@ -3,7 +3,6 @@
   justify-content: center;
   
   width: 100%;
-  min-height: 300px;
   
   padding: 16px;
 
@@ -14,7 +13,7 @@
 
     transition: all .8s;
     
-    width: 75%;
+    width: $screenExtraLarge;
   
     > header{
       > h2{
@@ -32,6 +31,7 @@
     }
   
     > form{
+      width: 100%;
       display: flex;
       align-items: center;
       flex-wrap: wrap;
@@ -40,7 +40,6 @@
       > label{
         display: flex;
         flex-direction: column;
-        justify-content: center;
 
         
         > span{
@@ -77,23 +76,16 @@
   @media(max-width: $screenExtraLarge){
     .content{
       align-items: center;
-
       width: 100%;
       padding: 32px;
-    }
-    .content > form{
-      justify-content: center;
-    }
-  }
+    
+      > form{
+        flex-direction: column;
 
-  @media(max-width: $screenMedium){
-    .content{
-      width: 100%;
-    }
-
-    .content > form > label {
-      > input{
-        width: 100%;
+        > button{
+          align-self: center;
+          width: 340px;
+        }
       }
     }
   }
@@ -110,6 +102,21 @@
             font-size: 16px;
           }
       }
+
+      > form{
+        > label {
+          width: 100%;
+          
+          > input{
+            width: 100%;
+          }
+        }
+
+        > button{
+          width: 100%;
+        }
+      }
     }
   }
+
 }

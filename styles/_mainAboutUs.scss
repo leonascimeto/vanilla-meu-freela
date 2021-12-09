@@ -12,10 +12,9 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 16px;
+    gap: 16px 8px;
 
-    width: 75%;
+    width: $screenExtraLarge;
 
     > main{
       width: 500px;
@@ -56,8 +55,8 @@
   @media(max-width: $screenExtraLarge){
     .content{
       justify-content: center;
+      flex-wrap: wrap;
 
-      width: 100%;
       padding: 32px;
 
       #aboutImage{
