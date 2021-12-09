@@ -79,10 +79,14 @@ function justLetter({ target }) {
 function executeNotifications(message, color, duration) {
   Toastify({
     text: message,
-    backgroundColor: color,
     gravity: 'bottom',
-    position: 'center',
+    position: 'right',
+    close: true,
+    stopOnFocus: true,
     duration,
+    style: {
+      background: color,
+    }
   }).showToast();
 }
 
@@ -101,6 +105,6 @@ function handleButtonSubmit(event) {
   } else {
     nameInput.value = '';
     whatsappInput.value = '';
-    executeNotifications('Seus dados foram salvos!, em breve entraremos em contato', '#10AC84', 4000);
+    executeNotifications('Seus dados foram salvos! Em breve entraremos em contato', '#10AC84', 3000);
   }
 }
