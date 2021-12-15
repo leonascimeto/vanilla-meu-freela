@@ -52,8 +52,6 @@
   }
 
   @media (max-width: $screenMedium) {
-    height: calc(100vh - 80px);
-
     #contentBg {
       padding: 32px;
     }
@@ -70,9 +68,4 @@
       width: 220px;
     }
   }
-
-  // @media (max-width: $screenSmall) {
-  //   height: auto;
-  //   padding-top: 80px;
-  // }
 }
