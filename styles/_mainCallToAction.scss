@@ -1,60 +1,61 @@
-#mainCallToAction{
+#mainCallToAction {
   display: flex;
   justify-content: center;
-  
+
   width: 100%;
-  
+
   padding: 16px;
 
-  .content{
+  .content {
     display: flex;
     flex-direction: column;
     justify-content: center;
 
-    transition: all .8s;
-    
+    transition: all 0.8s;
+
     width: $screenExtraLarge;
-  
-    > header{
-      > h2{
+
+    > header {
+      > h2 {
         font-weight: bold;
         font-size: 50px;
-        line-height: 1.2; 
-        margin-bottom: 20px;   
+        line-height: 1.2;
+        margin-bottom: 20px;
       }
-  
-      > p{
+
+      > p {
         font-size: 22px;
-        line-height: 1.2;    
+        line-height: 1.2;
         margin-bottom: 40px;
       }
     }
-  
-    > form{
+
+    > form {
       width: 100%;
       display: flex;
       align-items: center;
       flex-wrap: wrap;
       gap: 22px;
 
-      > label{
+      > label {
         display: flex;
         flex-direction: column;
 
-        
-        > span{
+        > span {
           color: var(--text);
-          
+
           font-size: 14px;
           line-height: 1.2;
         }
 
-        > input{
+        > input {
           width: 340px;
           height: 60px;
-          
+
+          border: 1px solid $colorGray;
+
           font-size: 18px;
-          
+
           padding: 16px;
 
           outline: none;
@@ -62,27 +63,26 @@
         }
       }
 
-      > button{
+      > button {
         align-self: flex-end;
 
         @include buttonStyle;
 
         background-color: var(--bgSuccesButton);
-        }
-  
+      }
     }
   }
 
-  @media(max-width: $screenExtraLarge){
-    .content{
+  @media (max-width: $screenExtraLarge) {
+    .content {
       align-items: center;
       width: 100%;
       padding: 32px;
-    
-      > form{
+
+      > form {
         flex-direction: column;
 
-        > button{
+        > button {
           align-self: center;
           width: 340px;
         }
@@ -90,33 +90,32 @@
     }
   }
 
-  @media(max-width: $screenSmall){
-    .content{
-      > header{
-          > h2{
-            font-size: 32px;
-            margin-bottom: 8px;
-          }
-      
-          > p{
-            font-size: 16px;
-          }
+  @media (max-width: $screenSmall) {
+    .content {
+      > header {
+        > h2 {
+          font-size: 32px;
+          margin-bottom: 8px;
+        }
+
+        > p {
+          font-size: 16px;
+        }
       }
 
-      > form{
+      > form {
         > label {
           width: 100%;
-          
-          > input{
+
+          > input {
             width: 100%;
           }
         }
 
-        > button{
+        > button {
           width: 100%;
         }
       }
     }
   }
-
 }

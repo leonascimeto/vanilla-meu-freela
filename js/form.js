@@ -96,15 +96,26 @@ function handleButtonSubmit(event) {
   const resultNameValidate = validationForm.validateName(nameInput.value);
   const resultWhatsappValidate = validationForm.validateWhatsapp(whatsappInput.value);
 
+  if(resultNameValidate.isValid)
+    nameInput.style.borderColor = '#10AC84';
+  if(resultWhatsappValidate.isValid)
+    whatsappInput.style.borderColor = '#10AC84';
+
   if (!resultNameValidate.isValid) {
     executeNotifications(resultNameValidate.message, '#EE5253', 2000);
+    nameInput.style.borderColor = '#EE5253';
     nameInput.focus();
   } else if (!resultWhatsappValidate.isValid) {
     executeNotifications(resultWhatsappValidate.message, '#EE5253', 2000);
+    whatsappInput.style.borderColor = '#EE5253';
     whatsappInput.focus();
   } else {
     nameInput.value = '';
     whatsappInput.value = '';
+
+    whatsappInput.style.borderColor = '#CDCDCD';
+    nameInput.style.borderColor = '#CDCDCD';
+
     executeNotifications('Seus dados foram salvos! Em breve entraremos em contato', '#10AC84', 3000);
   }
 }

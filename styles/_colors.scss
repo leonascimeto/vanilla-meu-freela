@@ -1,23 +1,24 @@
-$colorBlackPrimary:#000;
-$colorBlackSecond:#151515;
+$colorBlackPrimary: #000;
+$colorBlackSecond: #151515;
 $colorBlackTerciary: #333;
 
 $colorWhite: #fff;
+$colorGray: #cdcdcd;
 
-$colorWarning: #EE5253;
-$colorSuccess: #10AC84;
+$colorWarning: #ee5253;
+$colorSuccess: #10ac84;
 
-$colorDarkWarning: darken(#EE5253, 25%);
-$colorDarkSuccess: darken(#10AC84, 25%);
+$colorDarkWarning: darken(#ee5253, 25%);
+$colorDarkSuccess: darken(#10ac84, 25%);
 
-$colorBgHeader: linear-gradient(180deg, #EE5253 0%, #D92223 100%);
-$colorBgSecond: #EAEAEA;
+$colorBgHeader: linear-gradient(180deg, #ee5253 0%, #d92223 100%);
+$colorBgSecond: #eaeaea;
 
-$colorBgTransparent: rgba(0,0,0,.8);
-$colorBgTransparentDark: rgba(0,0,0,.9);
+$colorBgTransparent: rgba(0, 0, 0, 0.8);
+$colorBgTransparentDark: rgba(0, 0, 0, 0.9);
 
 //default theme
-:root{
+:root {
   --bgMain: #{$colorWhite};
   --bgHeader: #{$colorBgHeader};
   --text: #{$colorBlackTerciary};
@@ -29,7 +30,7 @@ $colorBgTransparentDark: rgba(0,0,0,.9);
 }
 
 //dark theme
-.dark{
+.dark {
   --bgMain: #{$colorBlackSecond};
   --text: #{$colorWhite};
   --bgImage: #{$colorBgTransparentDark};
