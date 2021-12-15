@@ -1,15 +1,15 @@
-@import './colors';
+@import "./colors";
 
-#mainApresentation{
+#mainApresentation {
   width: 100%;
   height: calc(100vh - 80px);
 
-  background-image: url('../assets/main.webp');
+  background-image: url("../assets/main.webp");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 
-  #contentBg{
+  #contentBg {
     display: flex;
     align-items: center;
 
@@ -21,58 +21,58 @@
     background-color: var(--bgImage);
   }
 
-  #content{
+  #content {
     max-width: 750px;
 
     color: $colorWhite;
 
-    > h1{
+    > h1 {
       font-size: 80px;
       line-height: 1.2;
       font-weight: 700;
       animation: showByLeft ease-in 1s;
     }
 
-    > h2{
+    > h2 {
       font-size: 30px;
       line-height: 1.2;
       font-weight: 400;
       animation: showByTop ease-in 1s;
     }
 
-    > button{
+    > button {
       @include buttonStyle;
 
       background-color: var(--bgWarningButton);
-      
+
       margin-top: 40px;
 
       animation: showByBottom ease-in 1s;
     }
   }
 
-  @media(max-width: $screenMedium){
+  @media (max-width: $screenMedium) {
     height: calc(100vh - 80px);
 
-    #contentBg{
+    #contentBg {
       padding: 32px;
     }
 
-    #content > h1{
+    #content > h1 {
       font-size: 32px;
     }
 
-    #content > h2{
+    #content > h2 {
       font-size: 24px;
     }
 
-    #content > button{
+    #content > button {
       width: 220px;
     }
   }
 
-  @media(max-width: $screenMedium){
-    height: auto;
-    padding-top: 80px;
-  }
+  // @media (max-width: $screenSmall) {
+  //   height: auto;
+  //   padding-top: 80px;
+  // }
 }
